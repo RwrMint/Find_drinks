@@ -10,7 +10,7 @@ function showFindPage(request, response) {
 		var result = "Not found"
 		for (var i = 0; i < drinks.length; i++) {
 			if (drinks[i].name == request.query.name) {
-				result = "The price is " + drinks[i].price
+				result = drinks[i].name + " The price is " + drinks[i].price
 			}
 		}
 		response.send("<b>" + result + "</b>")
